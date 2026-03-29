@@ -1,0 +1,5 @@
+Anda dapat mengunduh dataset yang spesifik untuk bitcoin dengan menjalankan kode di bawah ini di bagian awal notebook.
+csv_url = 'https://drive.google.com/uc?export=download&id=1hpsqSpfjdqIZWqwd259klQSeaNSe5Trr'
+
+df = pd.read_csv(csv_url)
+Karena rentang nilai pada setiap fitur dalam dataset variasinya akan sangat luas, Anda disarankan melakukan normalisasi atau standarisasi pada masing-masing kolom secara terpisah. Tujuannya adalah agar setiap fitur berada pada skala yang sebanding, sehingga model tidak “berpihak” pada fitur dengan nilai yang jauh lebih besar.

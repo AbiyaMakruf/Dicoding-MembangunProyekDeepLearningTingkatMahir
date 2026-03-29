@@ -1,0 +1,12 @@
+Beberapa poin ini perlu diperhatikan ketika mengirimkan berkas submission salah satunya menggunakan bahasa pemrograman Python. Lalu dokumen yang dikumpulkan adalah:
+
+Notebook time series forecasting dengan format .ipynb.
+Tiga model machine learning berformat .keras dengan dua model sebagai dokumen model mandatory, yaitu model_baseline_lstm dan seq2seq_lstm_model. Kemudian satu model machine learning dengan nama best_seq2seq_lstm_model sebagai opsional.
+Mengirimkan pekerjaan Anda dalam 1 folder yang telah di-zip.
+File .ipynb yang dikirim telah dijalankan terlebih dahulu sehingga output ada tanpa reviewer perlu menjalankan ulang notebook.
+DLTM_Nama-siswa
+├── Nama_Submission_Akhir_DLTM.ipynb
+├── model_baseline_LSTM.keras
+├── model_seq2seq_LSTM.keras
+├── best_model_seq2seq_LSTM.keras (Opsional)
+├── requirements.txt

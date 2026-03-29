@@ -1,0 +1,15 @@
+Perjalanan panjang dalam tujuh modul sebelumnya sudah membawa Anda beberapa langkah lebih maju untuk memahami teknik yang digunakan dalam deep learning tingkat mahir. Jika selama ini Anda hanya berkutat dengan teknik yang bisa dibilang template, sekarang Anda diperkenalkan dengan cara yang lebih fleksibel dan dinamis.
+
+Anda memulai seluruh perjalanan ini dengan memperdalam terlebih dahulu pengetahuan fundamental soal TensorFlow. Berkat itu, Anda dapat bergerak maju untuk memahami cara membuat kustomisasi pada arsitektur model machine learning. Tidak berhenti di situ, Anda juga mengeksplorasi cara untuk melatih model yang telah dibuat tanpa bergantung dengan fungsi built-in yang sudah disediakan TensorFlow.
+
+Seluruh kekuatan yang berasal dari senjata dan cara mengasah yang dikustomisasi tersebut akhirnya melahirkan peluang baru dan kebebasan. Sangat disayangkan jika impact yang begitu powerful tersebut tidak Anda show-off dalam portofolio Anda sebagai Machine Learning Engineer.
+
+Oleh karena itu, dalam proyek ini Anda akan diberikan kesempatan untuk dapat membuat sebuah Custom Model dengan training pipeline yang dikustomisasi. Selain itu, kita juga berkenalan dengan pendekatan lanjutan dari 4 dunia machine learning, yaitu sistem rekomendasi, computer vision, natural language processing, dan time series. Nah, pada proyek ini, Anda akan ditantang untuk membangun sebuah model Time Series Forecasting.
+
+Time series forecasting merupakan salah satu kasus yang paling dicari di industri dan menawarkan kompleksitas yang ideal untuk menunjukkan pemahaman Anda. Anda tidak hanya akan memprediksi satu langkah ke depan, tetapi beberapa langkah sekaligus atau yang disebut multi-horizon atau multi-step forecasting, sebuah tantangan yang membutuhkan arsitektur model yang canggih.
+
+Untuk mengatasi ini, Anda akan diharapkan dapat membangun arsitektur Sequence-to-Sequence (Seq2Seq) LSTM. Model seperti ini sering kali lebih efektif dibangun dengan Functional API atau Subclassing ketimbang model Sequential biasa. Proses training-nya yang unik juga menjadi kesempatan sempurna untuk memanfaatkan Custom Callback untuk visualisasi prediksi dan Custom Training Loop untuk kontrol penuh atas proses pembelajaran.
+
+Dalam proyek ini, Anda telah disediakan dataset time series yang sangat menarik dan sangat happening belakangan ini, yaitu nilai crypto bitcoin yang dicatat setiap jamnya. Fokus dalam proyek ini adalah menguji pemahaman Anda untuk membuat arsitektur model sekuensial yang dapat melakukan prediksi multivariate multi-step time series dengan target prediksi nilai penutupan (Close) bitcoin.
+
+Apakah Anda sudah tidak sabar? Mari kita mulai!

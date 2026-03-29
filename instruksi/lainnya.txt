@@ -1,0 +1,22 @@
+Submission yang Tidak Sesuai Kriteria
+Jika tidak sesuai dengan kriteria, submission Anda akan ditolak oleh reviewer. Berikut poin-poinnya.
+
+Tidak melampirkan file yang diminta pada ketentuan berkas submission.
+Tidak menggunakan dataset time series yang telah ditentukan untuk proyek.
+Dokumen notebook tidak dijalankan terlebih dahulu, sehingga output sel kode tidak terekam.
+Proyek time series yang dibuat adalah single-step dan univariate atau bivariate time series.
+Tidak membuat Model Sequence to Sequence menggunakan custom model (functional API atau sub classing)
+Tidak membagi data menjadi tiga kategori (train, validation, dan test)
+Tidak menampilkan atau menghitung nilai MAE pada data test sebagai metrik evaluasi utama.
+Terjadi kebocoran data (data leakage), di mana informasi dari data validasi atau data test masuk ke dalam proses training (contoh: melakukan scaling pada keseluruhan data sebelum dibagi).
+Tidak diperbolehkan menggunakan platform atau metode AutoML seperti berikut.
+PyCaret
+Auto-sklearn
+Google Cloud AutoML 
+H2O Driverless AI (dari H2O.ai)
+Microsoft Azure Automated Machine Learning
+TPOT (Tree-based Pipeline Optimization Tool)
+DataRobot
+RapidMiner Auto Model
+Amazon SageMaker Autopilot
+IBM Watson AutoAI

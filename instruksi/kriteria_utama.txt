@@ -1,0 +1,107 @@
+Untuk memastikan pengerjaan proyek Multivariate Multi-Horizon Time Series Forecasting berjalan terstruktur dan sesuai standar evaluasi, peserta diwajibkan mengikuti instruksi penilaian kriteria yang diberikan setelah ini. Berikut ini hal-hal yang perlu diperhatikan sebelum memulai pengerjaan projek:
+
+Buat notebook baru dengan nama “Nama_Submission_Akhir_DLTM.ipynb”.
+Notebook harus dijalankan tanpa error sebelum dikirimkan untuk memastikan seluruh proses berjalan dengan baik.
+Dataset yang digunakan dalam notebook clustering untuk projek kali ini yaitu:
+Multivariate Crypto Data Hourly since 2017 to 2023
+Dataset tersebut adalah data historikal dari harga beberapa coin crypto terhadap USD. Pada submission kali ini, kita akan menggunakan dataset bitcoin saja. Langkah untuk mengunduh dataset spesifik ke bitcoin akan ditunjukan pada bagian Tips & Trick.  
+Memastikan memenuhi standar Basic submission, baru lanjut ke Skilled dan Advanced
+Pastikan untuk mengunduh model dalam format Keras (.keras).
+ 
+
+Kriteria 1: Mempersiakan Data dan Membangun Model Baseline
+Menggunakan minimal 3 fitur sebagai input ke Model Forecasting.
+Melakukan Eksplorasi Data Analysis dengan membuat heatmap korelasi antar fitur yang dipilih.
+Pastikan tidak terjadi data leakage saat melakukan normalisasi atau standardisasi pada data.
+Berhasil membangun model LSTM dasar sebagai baseline dan melatihnya menggunakan model.fit().
+Reject (0 pts)
+
+Menggunakan kurang dari 3 fitur sebagai input ke Model Forecasting.
+Tidak melakukan Eksplorasi Data Analysis dengan membuat heatmap korelasi antar fitur yang dipilih.
+Terjadi data leakage saat melakukan normalisasi atau standardisasi pada data.
+Tidak berhasil membangun model LSTM dasar sebagai baseline dan melatihnya menggunakan model.fit().
+Basic (2 pts)
+
+Menggunakan setidaknya 3 fitur sebagai input ke Model Forecasting.
+Melakukan Eksplorasi Data Analysis dengan membuat heatmap korelasi antar fitur yang dipilih.
+Pastikan tidak terjadi data leakage saat melakukan normalisasi atau standardisasi pada data.
+Berhasil membangun model LSTM dasar sebagai baseline dan melatihnya menggunakan model.fit().
+Skilled (3 pts)
+
+Semua ketentuan Basic terpenuhi.
+Membuat pipeline data dengan tf.data.Dataset dan membaginya menjadi data train, data validation, dan data test.
+Melakukan analisis dekomposisi pada data target dan menampilkan plot hasil analisisnya.
+Advanced (4 pts)
+
+Semua ketentuan  Skilled terpenuhi.
+Menentukan window size berdasarkan hasil analisis lag pada data (Uji ACF dan PACF). Pastikan juga untuk memvisualisasikan plot hasil Uji ACF dan PACF.
+Melakukan feature engineering dengan membuat setidaknya satu fitur baru menggunakan Rolling Statistic.
+ 
+
+Kriteria 2: Membangun Arsitektur Model Kustom
+Membangun model baru, Seq2Seq LSTM dengan pendekatan Teacher Forcing menggunakan Functional API.
+Membuat ulang satu layer Dense dari nol dengan Custom Layer.
+Memastikan model LSTM dan Seq2Seq LSTM ditujukan untuk multi-step time series forecasting sebanyak 24 step.
+Reject (0 pts)
+
+Tidak Membangun model baru, Seq2Seq LSTM dengan pendekatan Teacher Forcing menggunakan Functional API.
+Tidak membuat ulang satu layer Dense dari nol dengan Custom Layer.
+Model LSTM dan Seq2Seq LSTM ditujukan untuk single-step time series forecasting atau kurang dari 24 step.
+Basic (2 pts)
+
+Membangun model baru, Seq2Seq LSTM dengan pendekatan Teacher Forcing menggunakan Functional API.
+Membuat ulang satu layer Dense dari nol dengan Custom Layer.
+Memastikan model LSTM dan Seq2Seq LSTM ditujukan untuk multi-step time series forecasting sebanyak 24 step.
+Skilled (3 pts)
+
+Semua ketentuan Basic terpenuhi.
+Model Seq2Seq Teacher Forcing dibangun dengan Model Subclassing.
+Menambahkan layer Multi-Head Attention pada model baseline LSTM serta Seq2Seq LSTM.
+Advanced (4 pts)
+
+Semua ketentuan Skilled terpenuhi.
+Menambahkan satu custom layer yang secara spesifik membuat ulang layer Multi Head Attention dan digunakan pada model baseline LSTM serta Seq2Seq LSTM.
+Membuat ulang satu atau lebih lagi custom layer. Berikut beberapa opsi custom layer yang Anda dapat buat:
+Dropout layer
+Normalization layer
+Activation function layer (Elu, Leaky Relu, dll)
+ 
+
+Kriteria 3: Membuat Pelatihan Kustom
+Membangun Custom Training dengan tf.GradientTape
+Loop Training berjalan dengan menampilkan jumlah epoch, loss, dan val loss.
+Melakukan inference prediksi pada data test menggunakan model LSTM dan Seq2Seq LSTM (Khusus untuk Seq2Seq gunakan teknik Autoregressive). Pastikan untuk memvisualisasikan hasil prediksi dalam bentuk plot line chart prediksi dan tabel perbandingan data aktual dengan hasil prediksi
+Contoh plot line chart prediksi:
+dos-7e097485952063709f18eadd151ae4e920250910112705.png
+Contoh tabel perbandingan data aktual dengan hasil prediksi (optional: tambahan kolom "selisih"):
+dos-206c30b76b5bef1f0dfe20dd2db417ed20250910112732.png
+Reject (0 pts)
+
+Tidak membangun Custom Training dengan tf.GradientTape
+Loop Training tidak berjalan dengan menampilkan jumlah epoch, loss, dan val loss.
+Tidak melakukan inference prediksi pada data test menggunakan model LSTM dan Seq2Seq LSTM (Khusus untuk Seq2Seq gunakan teknik Autoregressive).
+Basic (2 pts)
+
+Membangun Custom Training dengan tf.GradientTape
+Loop Training berjalan dengan menampilkan jumlah epoch, loss, dan val loss.
+Melakukan inference prediksi pada data test menggunakan model LSTM dan Seq2Seq LSTM (Khusus untuk Seq2Seq gunakan teknik Autoregressive). Pastikan untuk memvisualisasikan hasil prediksi dalam bentuk plot line chart prediksi dan tabel perbandingan data aktual dengan hasil prediksi
+Contoh plot line chart prediksi:
+dos-7e097485952063709f18eadd151ae4e920250910112705.png
+Contoh tabel perbandingan data aktual dengan hasil prediksi (optional: tambahan kolom "selisih"):
+dos-206c30b76b5bef1f0dfe20dd2db417ed20250910112732.png
+Skilled (3 pts)
+
+Semua ketentuan Basic terpenuhi.
+Membuat dari awal fungsi loss MAE sebagai Custom Loss dan menggunakannya pada Custom Training.
+Membuat dari awal fungsi callback early stopping sebagai Custom Callback dan menggunakannya pada Custom Training.
+Advanced (4 pts)
+
+Semua ketentuan  Skilled terpenuhi.
+Membuat Custom Loss yang menambahkan weight loss pada horizon atau step yang lebih jauh dan menggunakannya pada Custom Training.
+Contoh :
+Error pada step ke-1 dikalikan bobot w_1 (misal: 1.0)
+Error pada step ke-2 dikalikan bobot w_2 (misal: 1.2)
+Error pada step ke-3 dikalikan bobot w_3 (misal: 1.4)
+dst.
+Membuat Custom Callback yang dapat mengurangi learning rate secara bertahap saat validation loss-nya stagnan selama beberapa epoch dan menggunakannya pada Custom Training.
+Performa model Custom Seq2Seq LSTM saat dievaluasi pada data test di bawah 0,015 MAE (kondisi sebelum di inverse scaled).
