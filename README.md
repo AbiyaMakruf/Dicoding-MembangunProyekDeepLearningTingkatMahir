@@ -1,4 +1,9 @@
-# Proyek Akhir Deep Learning Tingkat Mahir
+# Proyek Akhir Membangun Proyek Deep Learning Tingkat Mahir
+
+## Penilaian Proyek
+Proyek ini berhasil mendapatkan bintang 5/5 pada submission dicoding course Membangun Proyek Deep Learning Tingkat Mahir.
+
+![Penilaian Proyek](README/penilaian_proyek.png)
 
 ## Ringkasan
 Project ini mengerjakan tugas akhir **Multivariate Multi-Horizon Time Series Forecasting** untuk memprediksi nilai penutupan (`Close`) Bitcoin selama **24 langkah ke depan** menggunakan pendekatan deep learning berbasis **LSTM** dan **Seq2Seq LSTM**.
